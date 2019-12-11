@@ -23,4 +23,9 @@ export class DebtorsComponent implements OnInit {
     alert(event.checked);
   }
 
+  CheckBoxValue(data){
+    console.log(data);
+  }
+
 }
+

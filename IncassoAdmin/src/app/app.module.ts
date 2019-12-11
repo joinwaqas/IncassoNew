@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -13,6 +14,7 @@ import { UsersComponent } from './users/users.component';
 import { AdministrationsComponent } from './administrations/administrations.component';
 import { DebtorsComponent } from './debtors/debtors.component';
 import { ActionsComponent } from './actions/actions.component';
+import { UploadDataComponent } from './upload-data/upload-data.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,7 @@ import { ActionsComponent } from './actions/actions.component';
     AdministrationsComponent,
     DebtorsComponent,
     ActionsComponent,
+    UploadDataComponent,
   ],
   imports: [
     BrowserModule,

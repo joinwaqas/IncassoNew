@@ -157,7 +157,7 @@
                             <td>
                                 <div class="switch right">
                                     <label>
-                                        <input type="checkbox" id="Status_265" value="265:3">
+                                        <input type="checkbox" id="tryCheckBox" name="TryCheckBox" #tryCheckBox="ngModel" ngModel (change)="CheckBoxValue(tryCheckBox.value)">
                                         <span class="lever"></span>
                                     </label>
                                 </div>

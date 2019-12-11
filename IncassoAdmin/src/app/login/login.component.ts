@@ -7,7 +7,6 @@ import { UserDataService } from '../Services/user-data.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent{
-
   constructor(private userService: UserDataService) { }
 
   onClickSubmit(data){
@@ -20,3 +19,4 @@ export class LoginComponent{
   }
 
 }
+
