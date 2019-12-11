@@ -1,0 +1,136 @@
+<div class="section">
+    <div class="row">
+        <div class="col s12 l6">
+            <form #newAdministrator="ngForm" (ngSubmit)="addNewAdministrator(newAdministrator.value)">
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Name" id="name" #name="ngModel" ngModel class="validate">
+                        <label for="Name" class="">Name</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Number" id="number" #number="ngModel" ngModel class="validate">
+                        <label for="Number" class="">Administration number</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Contact" id="contact" #contact="ngModel" ngModel class="">
+                        <label for="Contact">Contact person</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Email" id="email" #email="ngModel" ngModel class="">
+                        <label for="Email">E-mail</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Phone" id="phoneNumber" #phoneNumber="ngModel" ngModel class="">
+                        <label for="Phone">Phone number</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="MobileNumber" id="mobileNumber" #mobileNumber="ngModel" ngModel
+                            class="">
+                        <label for="Phone2">Mobile</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Bank" id="bank" #bank="ngModel" ngModel class="">
+                        <label for="Bank">Bank</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="AccountNumber" id="accountNumber" #accountNumber="ngModel" ngModel
+                            class="">
+                        <label for="Account">Account nr.</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Iban" id="iban" #iban="ngModel" ngModel class="">
+                        <label for="Iban">IBAN</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Bic" id="bic" #bic="ngModel" ngModel class="">
+                        <label for="Bic">BIC</label>
+                    </div>
+                    <div class="col s12">
+                        <label>View Users</label><br>
+
+                        <div class="left padding-05">
+                            <input type="checkbox">
+                            <label>Waqas</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button type="submit" id="btn_submit" class="btn waves-effect waves-light"><i
+                                class="material-icons left">save</i>Save</button>
+                        <input type="hidden" name="edit" id="edit">
+                        <div class="preloader-wrapper small active right" style="margin-right:1rem;display:none;">
+                            <div class="spinner-layer spinner-green-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row success-container" style="display:none;">
+                    <div class="col s12 main-green white-text">
+                        <br>
+                        <i class="material-icons left">thumb_up</i>Data was saved successfully! <br><br>
+                    </div>
+                </div>
+                <div class="row error-container" style="display:none;">
+                    <div class="col s12 red white-text">
+                        <br>
+                        <i class="material-icons left">thumb_down</i>Something went wrong! <br><br>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="col s12 l6 white z-depth-1" id="datalist">
+
+
+            <div id="table-list">
+
+<!-- 
+                <script>
+                    var defaultPageOptions = { RequestedPage: 0, PageSize: 50 };
+                </script> -->
+                <ul class="pagination center">
+
+
+                </ul>
+                <div class="input-field">
+                    <i class="material-icons prefix tiny">search</i>
+                    <input type="text" id="tablesearch" placeholder="Search term...">
+                </div>
+                <table class="responsive-table highlight bordered" id="table-list">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Administration Number</th>
+                            <th width="90px"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Schoonpand</td>
+                            <td>127</td>
+                            <td>
+                                <a href="#anchor" class="waves-effect waves-light grey-text text-darken-1 btn_edit"><i class="material-icons">edit</i></a>
+                                <a href="#anchor" class="waves-effect waves-light grey-text text-darken-1 btn_delete"><i class="material-icons">delete</i></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>

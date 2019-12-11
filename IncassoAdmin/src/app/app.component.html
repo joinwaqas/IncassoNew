@@ -1,0 +1,78 @@
+<!--CDN to get all material icons-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<!-- -->
+
+<header>
+    <div class="top-nav black white-text right-align">
+        <div class="left module">Backend  </div>
+
+
+            <div *ngIf="isLogedIn" class="right" style="display:block;">
+                <a href="/Account/Logout" class="logout center"><i class="material-icons">exit_to_app</i></a>
+            </div>
+            <div *ngIf="isLogedIn" class="right">
+                <span class="white-text name truncate">admin</span>
+            </div>
+        <div class="right">
+            <a href="/AbpLocalization/ChangeCulture?cultureName=nl-NL&amp;"><i class="famfamfam-flags nl"></i> Nederlands</a>  |
+            <a href="/AbpLocalization/ChangeCulture?cultureName=en&amp;"><i class="famfamfam-flags gb"></i> English</a>
+        </div>
+    </div>
+</header>
+
+<nav *ngIf="!isLogedIn" class="black white-text">
+    <div class="nav-wrapper container">
+        <a href="?home" class="brand-logo"><img src="../assets/images/logo-small.png" class="responsive-img"></a>
+    </div>
+</nav>
+
+
+
+
+<nav *ngIf="isLogedIn" class="nav-extended main-green">
+    <div class="nav-wrapper container">
+        <a href="/Dashboard" class="brand-logo left">
+            <img src="../assets/images/logo-small.png" class="responsive-img">
+        </a>
+        
+<div class="menu">
+<ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="">
+                <a href="/users" target="_self"> <span>Users</span> </a>
+
+        </li>
+        <li class="">
+                <a href="/administrations" target="_self"> <span>Administrations</span> </a>
+
+        </li>
+        <li class="">
+                <a href="/debtors" target="_self"> <span>Debtors</span> </a>
+
+        </li>
+        <li class="">
+                <a href="/uploaddata" target="_self"> <span>Upload Data</span> </a>
+
+        </li>
+        <li class="">
+                <a href="aActions" target="_self"> <span>Actions</span> </a>
+
+        </li>
+
+</ul>
+</div>
+    </div>
+    <div class="nav-header center hide-on-med-and-down">
+        <h1 class="semibold center">Dashboard </h1>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,180 @@
+<div class="section">
+    <div class="row">
+        <div class="col s12 l6">
+            <form #newDebtor="ngForm" (ngSubmit)="addNewDebtor(newDebtor.value)">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div class="select-wrapper">
+                            <div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text"
+                                    readonly="true" data-target="select-options-1a98a55b-5571-1e33-23c8-e3f09309457b">
+                                <ul id="select-options-1a98a55b-5571-1e33-23c8-e3f09309457b"
+                                    class="dropdown-content select-dropdown" tabindex="0">
+                                    <li class="disabled" id="select-options-1a98a55b-5571-1e33-23c8-e3f09309457b0"
+                                        tabindex="0"><span>Choose an administration</span></li>
+                                    <li id="select-options-1a98a55b-5571-1e33-23c8-e3f09309457b1" tabindex="0">
+                                        <span>Testzaak 1234</span></li>
+                                    <li id="select-options-1a98a55b-5571-1e33-23c8-e3f09309457b2" tabindex="0"
+                                        class="selected"><span>test</span></li>
+                                    <li id="select-options-1a98a55b-5571-1e33-23c8-e3f09309457b3" tabindex="0">
+                                        <span>Testingpart1</span></li>
+                                    <li id="select-options-1a98a55b-5571-1e33-23c8-e3f09309457b4" tabindex="0">
+                                        <span>Schoonpand</span></li>
+                                </ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 10l5 5 5-5z"></path>
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                </svg><select id="AdministratorId" name="AdministratorId" class="initialized"
+                                    tabindex="-1">
+                                    <option value="" disabled="" selected="">Choose an administration</option>
+                                    <option value="108">Testzaak 1234</option>
+                                    <option value="109">test</option>
+                                    <option value="116">Testingpart1</option>
+                                    <option value="117">Schoonpand</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                        <label>Administration</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Name" id="name" #name="ngModel" ngModel class="validate">
+                        <label for="Name">Name</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="DebtorNumber" id="debtorNumber" #debtorNumber="ngModel" ngModel class="validate">
+                        <label for="Number">Debtor number</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Contact" id="contact" #contact="ngModel" ngModel class="">
+                        <label for="Contact">Contact person</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Email" id="email" #email="ngModel" ngModel class="">
+                        <label for="Email">E-mail</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Phone" id="phoneNumber" #phoneNumber="ngModel" ngModel class="">
+                        <label for="Phone">Phone number</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="MobileNumber" id="mobileNumber" #mobileNumber="ngModel" ngModel class="">
+                        <label for="Phone2">Mobile</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Address" id="address" #address="ngModel" ngModel class="">
+                        <label for="Address">Address</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="PostalCode" id="postalCode" #postalCode="ngModel" ngModel class="">
+                        <label for="Postal">Postal code</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="City" id="city" #city="ngModel" ngModel class="">
+                        <label for="City">City</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Country" id="country" #country="ngModel" ngModel class="">
+                        <label for="Country">Country</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Notes" id="notes" #notes="ngModel" ngModel class="">
+                        <label for="Notes">Notes</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Notes_mm" id="notes_MM" #notes_MM="ngModel" ngModel class="">
+                        <label for="Notes_mm">Notes MM</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button type="submit" id="btn_submit" class="btn waves-effect waves-light"><i
+                                class="material-icons left">save</i>Save</button>
+                        <input type="hidden" name="edit" id="edit">
+                        <input type="hidden" name="hiddenstatus" id="hiddenstatus">
+                        <div class="preloader-wrapper small active right" style="margin-right:1rem;display:none;">
+                            <div class="spinner-layer spinner-green-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row success-container" style="display:none;">
+                    <div class="col s12 main-green white-text">
+                        <br>
+                        <i class="material-icons left">thumb_up</i>Data was saved successfully! <br><br>
+                    </div>
+                </div>
+                <div class="row error-container" style="display:none;">
+                    <div class="col s12 red white-text">
+                        <br>
+                        <i class="material-icons left">thumb_down</i>Something went wrong! <br><br>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col s12 l6 white z-depth-1" id="datalist">
+
+            <div id="table-list">
+
+                <script>
+                    var defaultPageOptions = { RequestedPage: 0, PageSize: 50 };
+                </script>
+
+
+                <ul class="pagination center">
+
+
+                </ul>
+                <div class="input-field">
+                    <i class="material-icons prefix tiny">search</i>
+                    <input type="text" id="tablesearch" placeholder="Search term...">
+                </div>
+                <table class="responsive-table highlight bordered" id="table-list">
+                    <thead>
+                        <tr>
+                            <th>Administrations</th>
+                            <th>Debtor Number</th>
+                            <th>Name</th>
+                            <th width="150px"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Testzaak 1234</td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="switch right">
+                                    <label>
+                                        <input type="checkbox" id="Status_265" value="265:3">
+                                        <span class="lever"></span>
+                                    </label>
+                                </div>
+                                <a href="#anchor"
+                                    class="waves-effect waves-light grey-text text-darken-1 btn_delete right"
+                                    data-id="265"><i class="material-icons">delete</i></a>
+                                <a href="#anchor"
+                                    class="waves-effect waves-light grey-text text-darken-1 btn_edit right"
+                                    data-id="265"><i class="material-icons">edit</i></a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
