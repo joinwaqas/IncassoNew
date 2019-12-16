@@ -15,6 +15,7 @@ import { AdministrationsComponent } from './administrations/administrations.comp
 import { DebtorsComponent } from './debtors/debtors.component';
 import { ActionsComponent } from './actions/actions.component';
 import { UploadDataComponent } from './upload-data/upload-data.component';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,7 @@ import { UploadDataComponent } from './upload-data/upload-data.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserDataService],
+  providers: [UserDataService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

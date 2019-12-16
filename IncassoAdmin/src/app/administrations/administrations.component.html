@@ -8,19 +8,19 @@
                         <label for="Name" class="">Name</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" name="Number" id="number" #number="ngModel" ngModel class="validate">
+                        <input type="text" name="AdministratorNumber" id="administratorNumber" #administratorNumber="ngModel" ngModel class="validate">
                         <label for="Number" class="">Administration number</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" name="Contact" id="contact" #contact="ngModel" ngModel class="">
+                        <input type="text" name="ContactPerson" id="contactPerson" #contactPerson="ngModel" ngModel class="">
                         <label for="Contact">Contact person</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" name="Email" id="email" #email="ngModel" ngModel class="">
+                        <input type="text" name="EmailAddress" id="emailAddress" #emailAddress="ngModel" ngModel class="">
                         <label for="Email">E-mail</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" name="Phone" id="phoneNumber" #phoneNumber="ngModel" ngModel class="">
+                        <input type="text" name="PhoneNumber" id="phoneNumber" #phoneNumber="ngModel" ngModel class="">
                         <label for="Phone">Phone number</label>
                     </div>
                     <div class="input-field col s12 l6">
@@ -118,12 +118,12 @@
                     </thead>
                     <tbody>
 
-                        <tr>
-                            <td>Schoonpand</td>
-                            <td>127</td>
+                        <tr *ngFor="let a of administrators">
+                            <td>{{a.name}}</td>
+                            <td>{{a.administratorNumber}}</td>
                             <td>
-                                <a href="#anchor" class="waves-effect waves-light grey-text text-darken-1 btn_edit"><i class="material-icons">edit</i></a>
-                                <a href="#anchor" class="waves-effect waves-light grey-text text-darken-1 btn_delete"><i class="material-icons">delete</i></a>
+                                <a [attr.id]="a.id" (click)="EditAdministrator(a.id)" class="waves-effect waves-light grey-text text-darken-1 btn_edit"><i class="material-icons" >edit</i></a>
+                                <a [attr.id]="a.id" (click)="DeleteAdministrator(a.id)" class="waves-effect waves-light grey-text text-darken-1 btn_delete"><i class="material-icons">delete</i></a>
                             </td>
                         </tr>
 

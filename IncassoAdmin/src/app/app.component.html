@@ -8,11 +8,12 @@
         <div class="left module">Backend  </div>
 
 
-            <div *ngIf="isLogedIn" class="right" style="display:block;">
-                <a href="/Account/Logout" class="logout center"><i class="material-icons">exit_to_app</i></a>
+            <div *ngIf="IfUserLogedIn()" class="right" style="display:block;">
+                <!-- <a href="/Account/Logout" class="logout center"><i class="material-icons">exit_to_app</i></a> -->
+                <a class="logout center"><i class="material-icons" (click)="UserLogout()">exit_to_app</i></a>
             </div>
-            <div *ngIf="isLogedIn" class="right">
-                <span class="white-text name truncate">admin</span>
+            <div *ngIf="IfUserLogedIn()" class="right">
+                <span class="white-text name truncate">{{LogedInUserName}}</span>
             </div>
         <div class="right">
             <a href="/AbpLocalization/ChangeCulture?cultureName=nl-NL&amp;"><i class="famfamfam-flags nl"></i> Nederlands</a>  |
@@ -21,7 +22,7 @@
     </div>
 </header>
 
-<nav *ngIf="!isLogedIn" class="black white-text">
+<nav *ngIf="!IfUserLogedIn()" class="black white-text">
     <div class="nav-wrapper container">
         <a href="?home" class="brand-logo"><img src="../assets/images/logo-small.png" class="responsive-img"></a>
     </div>
@@ -31,7 +32,7 @@
 
 
 
-<nav *ngIf="isLogedIn" class="nav-extended main-green">
+<nav *ngIf="IfUserLogedIn()" class="nav-extended main-green">
     <div class="nav-wrapper container">
         <a href="/Dashboard" class="brand-logo left">
             <img src="../assets/images/logo-small.png" class="responsive-img">
@@ -40,7 +41,7 @@
 <div class="menu">
 <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li class="">
-                <a href="/users" target="_self"> <span>Users</span> </a>
+                <a href="/users"> <span>Users</span> </a>
 
         </li>
         <li class="">
@@ -56,7 +57,7 @@
 
         </li>
         <li class="">
-                <a href="aActions" target="_self"> <span>Actions</span> </a>
+                <a href="actions" target="_self"> <span>Actions</span> </a>
 
         </li>
 

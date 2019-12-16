@@ -3442,23 +3442,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kausar\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Waqas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Kausar\\Igor\\IncassoNew\\IncassoNewApi\\IncassoNewApi.csproj",
+      "projectUniqueName": "D:\\IncassoNew\\IncassoNewApi\\IncassoNewApi.csproj",
       "projectName": "IncassoNewApi",
-      "projectPath": "D:\\Kausar\\Igor\\IncassoNew\\IncassoNewApi\\IncassoNewApi.csproj",
-      "packagesPath": "C:\\Users\\kausar\\.nuget\\packages\\",
-      "outputPath": "D:\\Kausar\\Igor\\IncassoNew\\IncassoNewApi\\obj\\",
+      "projectPath": "D:\\IncassoNew\\IncassoNewApi\\IncassoNewApi.csproj",
+      "packagesPath": "C:\\Users\\Waqas\\.nuget\\packages\\",
+      "outputPath": "D:\\IncassoNew\\IncassoNewApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kausar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Waqas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3466,7 +3462,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://reactjs.net/packages/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

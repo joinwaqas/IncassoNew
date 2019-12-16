@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 //import 'rxjs/add/operator/map'
-import { Users} from '../Classes/Users';
+import { User } from '../Classes/User';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,19 +10,20 @@ import { Observable } from 'rxjs';
 })
 export class UserDataService {
 
-apiUrl: string = "https://localhost:44316/api/Users/";
+apiUrl: string = "http://localhost:58585/api/User/";
 
   constructor(private httpClient: HttpClient) { }
 
   isLogedIn = false;
 
-  RegisterUser(user: Users): Observable<any>{
-    console.log("Data coming from user is "+user.emailAddress);
-    return this.httpClient.post(this.apiUrl+"CreateUser",user);
+  RegisterUser(user: User): Observable<any>{
+    //console.log("Data coming from user is ");
+    return this.httpClient.post(this.apiUrl+"RegisterUser",user);
   }
 
-  LoginUser(user: Users): Observable<any>{
+  LoginUser(user: User): Observable<any>{
     return this.httpClient.post(this.apiUrl+"UserLogin",user);
+    
     this.isLogedIn = true;
   }
   GetAllUsers(){

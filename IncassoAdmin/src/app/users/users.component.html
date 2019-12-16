@@ -3,14 +3,14 @@
     <div class="row">
         <div class="col s12 l6">
             <!-- <form id="form_users" enctype="multipart/form-data" method="post" action="?users/add" autocomplete="off"> -->
-                <form>
+                <form #addNewUser="ngForm" (ngSubmit)="CreateNewUser(addNewUser.value)">
                 <div class="row">
                     <div class="input-field col s12 l6">
-                        <input type="text" name="Name" id="Name" class="validate valid" value="" autocomplete="off">
+                        <input type="text" name="UserName" id="userName" #userName="ngModel" ngModel class="validate valid" value="" autocomplete="off">
                         <label for="Name" class="">User Name</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="password" name="Password" autocomplete="off" value="" id="Password">
+                        <input type="password" name="Password" #password="ngModel" ngModel autocomplete="off" value="" id="Password">
                         <label for="Password" class="">Password</label>
                     </div>
                     <div class="input-field col s12 l6">
@@ -22,6 +22,12 @@
                         </select></div>
                         <label>Role</label>
 
+                    </div>
+                    <div class="input-field col s12 16">
+                        <div class="left padding-05">
+                            <input type="checkbox" id="Incasso" value="1" class="">
+                            <label for="Incasso">Collection</label>
+                        </div>
                     </div>
 
 
@@ -61,7 +67,7 @@
                 </div> -->
                 <div class="row">
                     <div class="col s12">
-                        <button type="button" id="btn_submit" class="btn waves-effect waves-light" value=""><i class="material-icons left">save</i>Save</button>
+                        <button type="submit" id="btn_submit" class="btn waves-effect waves-light" value=""><i class="material-icons left">save</i>Save</button>
                         <input type="hidden" name="edit" id="edit" value="13">
                         <div class="preloader-wrapper small active right" style="margin-right:1rem;display:none;">
                             <div class="spinner-layer spinner-green-only">
@@ -116,8 +122,8 @@
     </thead>
     <tbody>
 
-            <tr>
-                <td>admin</td>
+            <tr *ngFor="let u of users">
+                <td>{{u.userName}}</td>
                 <td>Admin</td>
                 <td></td>
                 <td>
