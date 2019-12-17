@@ -16,7 +16,7 @@ export class AppComponent {
       ){
 
   }
-
+  
   //isLogedIn = false;
     //isLogedIn = this.userService.isLogedIn;
    LogedInUserName = "";

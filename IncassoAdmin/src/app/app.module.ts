@@ -16,6 +16,9 @@ import { DebtorsComponent } from './debtors/debtors.component';
 import { ActionsComponent } from './actions/actions.component';
 import { UploadDataComponent } from './upload-data/upload-data.component';
 import { CookieService } from 'ngx-cookie-service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,11 @@ import { CookieService } from 'ngx-cookie-service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule
+
   ],
   providers: [UserDataService, CookieService],
   bootstrap: [AppComponent]

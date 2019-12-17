@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent{
-
+  showLoader = false;
   constructor(private userService: UserDataService,
     private cookies: CookieService,
     private appComponent: AppComponent,
@@ -19,6 +19,7 @@ export class LoginComponent{
   
 
   onClickSubmit(data) {
+    this.showLoader = true;
     this.userService.LoginUser(data).subscribe(
       data => {
 
@@ -30,6 +31,9 @@ export class LoginComponent{
           this.cookies.set("LogedInUserName", data.firstName);
           // console.log(data);
           this.cookies.set("LogedInUser", data.firstName);
+
+          this.showLoader = false;
+
           this.router.navigate(['dashboard']);
         }
       }

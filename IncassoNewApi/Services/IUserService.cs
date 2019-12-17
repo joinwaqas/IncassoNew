@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace IncassoNewApi.Services
 {
-    interface IUserService
+    public interface IUserService
     {
-        Inc_User Authenticate(string username, string password);
-        IEnumerable<Inc_User> GetAll();
+        User GetUser(User user);
+        User RegisterUser(User user);
+        List<User> GetAllUsers();
+
     }
 }
