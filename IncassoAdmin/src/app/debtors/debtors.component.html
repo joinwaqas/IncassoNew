@@ -4,7 +4,7 @@
             <form #newDebtor="ngForm" (ngSubmit)="addNewDebtor(newDebtor.value)">
                 <div class="row">
                     <div class="input-field col s12">
-                        <div class="select-wrapper">
+                        <!-- <div class="select-wrapper">
                             <div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text"
                                     readonly="true" data-target="select-options-1a98a55b-5571-1e33-23c8-e3f09309457b">
                                 <ul id="select-options-1a98a55b-5571-1e33-23c8-e3f09309457b"
@@ -34,8 +34,18 @@
 
                                 </select>
                             </div>
-                        </div>
-                        <label>Administration</label>
+                        </div> -->
+                        <!-- <label>Administrations</label>  -->
+                        <mat-form-field class="language-dropdown">
+                                <mat-label style="color:darkgray;">Administrations</mat-label>
+                                <mat-select>
+                                  <mat-option>None</mat-option>
+                                  <mat-option value="option1">Option 1</mat-option>
+                                  <mat-option value="option2">Option 2</mat-option>
+                                  <mat-option value="option3">Option 3</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        
                     </div>
                     <div class="input-field col s12 l6">
                         <input type="text" name="Name" id="name" #name="ngModel" ngModel class="validate">
@@ -46,15 +56,15 @@
                         <label for="Number">Debtor number</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" name="Contact" id="contact" #contact="ngModel" ngModel class="">
+                        <input type="text" name="ContactPerson" id="contactPerson" #contactPerson="ngModel" ngModel class="">
                         <label for="Contact">Contact person</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" name="Email" id="email" #email="ngModel" ngModel class="">
+                        <input type="text" name="EmailAddress" id="emailAddress" #emailAddress="ngModel" ngModel class="">
                         <label for="Email">E-mail</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" name="Phone" id="phoneNumber" #phoneNumber="ngModel" ngModel class="">
+                        <input type="text" name="PhoneNumber" id="phoneNumber" #phoneNumber="ngModel" ngModel class="">
                         <label for="Phone">Phone number</label>
                     </div>
                     <div class="input-field col s12 l6">
@@ -78,7 +88,7 @@
                         <label for="Country">Country</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" name="Notes" id="notes" #notes="ngModel" ngModel class="">
+                        <input type="text" name="NotesMM" id="notesMM" #notesMM="ngModel" ngModel class="">
                         <label for="Notes">Notes</label>
                     </div>
                     <div class="input-field col s12 l6">

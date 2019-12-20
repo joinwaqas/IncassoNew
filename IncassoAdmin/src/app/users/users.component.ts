@@ -9,7 +9,7 @@ import { User } from '../Classes/User';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent {
-
+  showProgressbar = false;
   constructor(private userService: UserDataService) { }
   //users: Observable<Users[]>;
   users: any;
@@ -27,14 +27,17 @@ export class UsersComponent {
   }
 
   CreateNewUser(data){
+    this.showProgressbar = true;
     this.userService.RegisterUser(data).subscribe(data =>
       {
         if(data == 1){
+          this.showProgressbar = false;
           //alert("New User has been created successfully");
           this.GetAllUserOnLoad();
         }
         else if(data == 0){
           alert("Something went wrong");
+          this.showProgressbar = false;
         }
       })
   }

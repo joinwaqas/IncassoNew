@@ -8710,3 +8710,41 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     stroke-width: 4;
     stroke-linecap: round
 }
+/* added by waqas to overwrite some styles of contorls */
+.mat-select-value{
+    color: black;
+    background: white;
+}
+.language-dropdown{
+    width: 100%;
+    
+}.mat-option{
+    background: white;
+    color: black;
+}
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: forestgreen;
+}
+.login-spinner{
+    margin: 0 auto;
+}
+.mat-form-field-infix{
+    border-bottom: 2px solid darkgray;
+}
+.mat-option:focus:not(.mat-option-disabled), .mat-option:hover:not(.mat-option-disabled){
+    background: lightgray;
+}
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple){
+    background: lightgray;
+    color: black;
+}
+.mat-option.mat-active{
+    background: lightgray;
+    color: black;
+}
+.switch label input[type=checkbox]:checked + .lever{
+    background: forestgreen;
+}
+.switch label input[type=checkbox]:checked + .lever:after{
+    background: forestgreen;
+}

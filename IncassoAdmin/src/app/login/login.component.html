@@ -21,14 +21,27 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s6">
+                <!-- <div class="input-field col s6">
                     <div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text" data-target="select-options-06e28e58-1757-a7d8-b558-4171d4aa4c9b"><ul id="select-options-06e28e58-1757-a7d8-b558-4171d4aa4c9b" class="dropdown-content select-dropdown" tabindex="0" ><li id="select-options-06e28e58-1757-a7d8-b558-4171d4aa4c9b0" tabindex="0" class="selected"><img alt="" src="../../assets/images/nl.png"><span>Nederlands</span></li><li id="select-options-06e28e58-1757-a7d8-b558-4171d4aa4c9b1" tabindex="0"><img alt="" src="../../assets/images/uk.jpg"><span>English</span></li></ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><select class="icons" name="Language" id="language" tabindex="-1">
                         <option value="nl-NL" data-icon="../../assets/images/nl.png" class="left circle">Nederlands</option>
                         <option value="en-US" data-icon="../../assets/images/uk.jpg" class="left circle">English</option>
                     </select></div>
                     <label>Language</label>
-                </div>
+                </div> -->
+                <div class="input-field col s6">
+                <mat-form-field class="language-dropdown">
+                        <mat-label style="color: black; display: inline;">Select an option</mat-label>
+                        <mat-select>
+                          <mat-option>None</mat-option>
+                          <mat-option value="option1">Option 1
+                                <img with="10" height="10" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg">
 
+                          </mat-option>
+                          <mat-option value="option2">Option 2</mat-option>
+                          <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
             </div>
         </div>
         <div class="row">
@@ -42,7 +55,7 @@
             <div *ngIf="showLoader" class="col-xs-12">
                     <div class="progress-loader" >
 
-                            <mat-progress-spinner [mode]="'indeterminate'">
+                            <mat-progress-spinner class="login-spinner" [mode]="'indeterminate'">
                             </mat-progress-spinner>
                         
                         </div>

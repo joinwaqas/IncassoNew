@@ -3,6 +3,7 @@ import { UserDataService } from '../Services/user-data.service';
 import { CookieService } from 'ngx-cookie-service';
 import { AppComponent } from '../app.component';
 import { Router } from '@angular/router';
+import {MatSelectModule} from '@angular/material/select'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

@@ -17,8 +17,9 @@ import { ActionsComponent } from './actions/actions.component';
 import { UploadDataComponent } from './upload-data/upload-data.component';
 import { CookieService } from 'ngx-cookie-service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +38,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     HttpClientModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
-    MatProgressBarModule
-
+    MatProgressBarModule,
+    MatSelectModule
   ],
   providers: [UserDataService, CookieService],
   bootstrap: [AppComponent]

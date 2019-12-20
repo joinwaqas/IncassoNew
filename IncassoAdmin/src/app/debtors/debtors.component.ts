@@ -16,7 +16,6 @@ export class DebtorsComponent implements OnInit {
   }
   addNewDebtor(data){
     console.log(data);
-    this
   }
 
   getEvent(event){
